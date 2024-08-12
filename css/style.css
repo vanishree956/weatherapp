@@ -1,0 +1,192 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F9D56E;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #F9D56E;
+    padding-top: 70px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.brand {
+    color: #FFFFFF;
+}
+
+.mark {
+    color: #333333;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #333333;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-item:hover {
+    color: #FFFFFF;
+}
+
+.login {
+    background-color: #fedf9b;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.container{
+    max-width: 970px !important; 
+}
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #F9D56E;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-item {
+        padding: 10px 0;
+        border-top: 1px solid #FFF;
+    }
+
+    .login {
+        margin: 10px 0;
+        border-radius: 10px;
+    }
+}
+
+/* weather widget */
+#weatherWidget {
+    display: block;
+    margin: 50px auto;
+    width: 90%;
+    max-width: 600px;
+    padding: 15px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#cityName {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#weatherInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weatherIcon {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    object-fit: contain;
+}
+
+#temperature, #humidity {
+    font-size: 30px;
+    font-weight: bold;
+}
+/* weather widget end */
+
+/* banner */
+.bannerContainer{
+    max-width: 570px;
+}
+.bannerContainer>h1{
+    font-size: 40px;
+    font-weight: bold;
+    padding: 20px 0;
+}
+.bannerContainer>span{
+    font-size: 22px;
+    color: rgba(41, 46, 52, .5);
+    /* max-width: 570px; */
+}
+.logoBtn{
+    padding: 5px 25px;
+    font-size: 15px;
+    border-radius: 50px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+/* banner-end */
+
+/* slider */
+.sliderImg>img{
+    height: 400px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+.quote{
+    height: 50px;
+    color: #fff;
+}
+.invertQuote{
+    rotate: 180deg;
+    height: 50px;
+}
+.sliderDiv{
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box-user{
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+}
+.userImg img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.userDetails>h4{
+    font-size: 16px !important;
+    font-weight: bold;
+    margin: 0;
+}
+.userDetails{
+    padding-left: 30px;
+}
+/* slider-end */
