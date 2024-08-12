@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <nav>
+        <nav class="navbar container mb-3">
+            <div class="logo">
+                <span class="brand">WEATHER</span><span class="mark">APP</span>
+            </div>
+            <div class="nav-links align-items-center" id="nav-links">
+                <a href="#" class="nav-item">Tools</a>
+                <a href="#" class="nav-item">Pricing</a>
+                <a href="#" class="nav-item">Support</a>
+                <a href="#" class="nav-item login">Login</a>
+            </div>
+            <div class="menu-icon" id="menu-icon">
+                &#9776;
+            </div>
+        </nav>
+
+        <div class="banner container mb-5">
+            <div class="bannerContainer">
+                <h1>Get Real-Time Weather Updates Instantly</h1>
+                <span>Stay informed with live weather data for your location. Access current conditions, forecasts, and weather alerts at your fingertips, anytime, anywhere.</span>
+                <div class="btnContainer">
+                    <button class="logoBtn btn btn-dark">Call to Action</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="weatherWidgetContainer" class="py-5">
+        <div id="weatherWidget">
+            <div class="input-group mb-3" id="cityInput">
+                <select class="form-select shadow-none" id="inputGroupSelect02" onchange="checkWeather(this.value)">
+                  <option value="Bagalkot">Bagalkot</option>
+                  <option value="Ballari">Ballari</option>
+                  <option value="Belagavi">Belagavi</option>
+                  <option value="Bengaluru" selected>Bengaluru</option>
+                  <option value="Bidar">Bidar</option>
+                  <option value="Chamarajanagar">Chamarajanagar</option>
+                  <option value="Chikkamagaluru">Chikkamagaluru</option>
+                  <option value="Chitradurga">Chitradurga</option>
+                  <option value="Davanagere">Davanagere</option>
+                  <option value="Dharwad">Dharwad</option>
+                  <option value="Gadag">Gadag</option>
+                  <option value="Hassan">Hassan</option>
+                  <option value="Haveri">Haveri</option>
+                  <option value="Kalaburagi">Kalaburagi</option>
+                  <option value="Kolar">Kolar</option>
+                  <option value="Koppal">Koppal</option>
+                  <option value="Mandya">Mandya</option>
+                  <option value="Mysuru">Mysuru</option>
+                  <option value="Raichur">Raichur</option>
+                  <option value="Ramanagara">Ramanagara</option>
+                  <option value="Shivamogga">Shivamogga</option>
+                  <option value="Tumakuru">Tumakuru</option>
+                  <option value="Udupi">Udupi</option>
+                  <option value="Vijayapura">Vijayapura</option>
+                  <option value="Yadgir">Yadgir</option>
+                </select>
+                <label class="input-group-text" for="inputGroupSelect02">Select City</label>
+            </div>              
+            <div id="weatherInfo" class="d-flex align-items-center justify-content-evenly">
+                <div class="d-flex align-items-center">
+                    <img class="weatherIcon" src="image/tempratureIcon.png" alt="Weather Icon" />
+                    <div>
+                        <p class="fs-6 opacity-50 m-0">Temprature</p>
+                        <p id="temperature" class="m-0"></p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center">
+                    <img class="weatherIcon" src="image/humidity.png" alt="Weather Icon" />
+                    <div>
+                        <p class="fs-6 opacity-50 m-0">Humidity</p>
+                        <p id="humidity" class="m-0"></p>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+
+    <div class="carousel container">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="sliderContainer row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 sliderDiv">
+                            <div class="sliderTextContain">
+                                <img src="./image/slider/quote.svg" alt="" srcset="" class="quote">
+                                <span>This weather website is a game-changer! The real-time updates are incredibly accurate, and the interface is super user-friendly. I never leave the house without checking it first!</span>
+                                <img src="./image/slider/quote.svg" alt="" srcset="" class="invertQuote">
+                            </div>
+                            <div class="box-user">
+                                <div class="userImg">
+                                    <img src="./image/slider/userpic1.jpg" alt="">
+                                </div>
+                                <div class="userDetails">
+                                    <h4>Emily R.</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 sliderImg">
+                            <img src="./image/slider/slide1.png" class="d-block " alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="sliderContainer row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 sliderDiv">
+                            <div class="sliderTextContain">
+                                <img src="./image/slider/quote.svg" alt="" srcset="" class="quote">
+                                <span>I love how quickly I can get the latest weather info with just a few clicks. It's perfect for planning my day, especially when the weather is unpredictable. Highly recommend!</span>
+                                <img src="./image/slider/quote.svg" alt="" srcset="" class="invertQuote">
+                            </div>
+                            <div class="box-user">
+                                <div class="userImg">
+                                    <img src="./image/slider/userpic2.jpg" alt="">
+                                </div>
+                                <div class="userDetails">
+                                    <h4>Sarah T.</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 sliderImg">
+                            <img src="./image/slider/slide2.png" class="d-block " alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="sliderContainer row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 sliderDiv">
+                            <div class="sliderTextContain">
+                                <img src="./image/slider/quote.svg" alt="" srcset="" class="quote">
+                                <span>The best part about this site is the detailed forecasts and alerts. It's saved me from getting caught in the rain more than once! Reliable and easy to use.</span>
+                                <img src="./image/slider/quote.svg" alt="" srcset="" class="invertQuote">
+                            </div>
+                            <div class="box-user">
+                                <div class="userImg">
+                                    <img src="./image/slider/userpic3.jpg" alt="">
+                                </div>
+                                <div class="userDetails">
+                                    <h4>David M.</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 sliderImg">
+                            <img src="./image/slider/slide3.png" class="d-block " alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
